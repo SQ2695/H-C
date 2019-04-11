@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>头像4</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+		}
+		.box{
+			width: 300px;
+			height: 300px;
+			position: relative;
+			margin:50px auto;
+			border-radius: 50%;
+
+
+		}
+		.img,.text{
+			position: absolute;
+			left: 0;
+			top: 0;
+			border-radius: 50%;
+			width: 100%;
+			height: 100%;
+
+
+		}
+
+		.img{
+			background: url(img/6.jpg) center center/cover no-repeat;
+			transition: 0.8s;
+			z-index: 9;
+		}
+
+		.img:after{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			
+			box-shadow: inset 0 0 0 15px rgba(255,255,255,.4)
+			
+
+		}
+		.text{
+			background-color: rgba(0,0,0,.4);
+			z-index: 2;
+			transform: translateX(-100%);
+			transition: 0.8s;
+			opacity: 0;
+		}
+
+		.box:hover .img{
+			transform: translate(100%) ;
+			opacity: 0;
+		}
+		.box:hover .text{
+			transform: translateX(0px);
+			opacity: 1;
+		}		
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="img"></div>
+		<div class="text">ee</div>
+	</div>
+	
+</body>
+</html>

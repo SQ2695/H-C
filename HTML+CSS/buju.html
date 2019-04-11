@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>布局</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;	
+		}
+		body{color: #fff;text-align: center;font-size: 16px;}
+/*		.container{/*基础行布局，行布局自适应，行布局水平居中
+			width: 800px;
+			max-width: 800px;
+			height: 1000px;
+			background: #4c77f2;
+			margin: 0% auto;
+			width: 800px;
+			height: 200px;
+			background: #4c77f2;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top:-100px;
+			margin-left: -400px
+		}
+*/		/*多行布局，滚动布局*/
+		.header{
+			width: 100%;
+			height: 50px;
+			background: #000;
+			margin:0 auto;
+			line-height: 50px;
+			position: fixed;
+
+		}
+		.banner{
+			width: 800px;
+			height: 300px;
+			background: #0099cc;
+			margin:0 auto;
+			/*line-height: 300px;*/
+			padding-top: 50px;/*解决文字被覆盖问题*/
+		}
+		.content{
+			width: 800px;
+			height: 1000px;
+			background: #4c7777;
+			margin:0 auto;
+			line-height: 1000px;
+
+		}
+		.footer{
+			width: 800px;
+			height: 100px;
+			background: #000;
+			margin:0 auto;
+			line-height: 100px;
+		}
+	</style>
+
+</head>
+<body>
+	<!-- <div class="container">页面内容</div> -->
+	<!-- /*多行布局，滚动布局*/ -->
+	<div class="header">页面头部</div>
+	<div class="banner">页面banner</div>
+	<div class="content">页面内容</div>
+	<div class="footer">页面底部</div>
+	
+</body>
+</html>

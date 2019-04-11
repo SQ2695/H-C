@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>中括号跳动</title>
+	<style>
+		*{
+			margin: 0;;
+			padding: 0;
+			list-style-type: none;
+		}
+		body{
+			background-color: #C0C5C7;
+		}
+		.list{
+			
+			font-family: "Microsoft YaHei","微软雅黑";
+            font-size: 16px;
+            text-align: center;
+		}
+		.list li{
+			margin: 30px;
+			display: inline-block;
+			
+		}
+		.list a{
+			position: relative;
+			text-decoration: none;
+			display: inline-block;
+			color: #fff;
+			height: 40px;
+			line-height: 40px;
+			padding: 0 20px;
+		}
+		.list a:after{
+			content: "]";
+			opacity: 0;
+			transform: translateX(10px);
+			position: absolute;
+			right: 0;/*文字的右上*/
+			top: 0;
+			transition: .35s;
+
+		}
+		.list a:before{
+			content: "[";
+			opacity: 0;
+			transform: translateX(-10px);
+			position: absolute;
+			left: 0;
+			top: 0;
+			transition: .35s;
+
+		}
+
+		.list a:hover:after,
+		.list a:hover:before{
+			opacity: 1;
+			transform: translateX(0px);
+		}
+	</style>
+</head>
+<body>
+	<ul class="list">
+		<li><a href="#">hrhrdth</a></li>
+		<li><a href="#">会无法回</a></li>
+	</ul>
+	
+</body>
+</html>

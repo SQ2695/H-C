@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>侧边跟随框</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin:0; 
+		}
+		.page{
+			width: 100%;
+			height: 4043px;
+			background: url(./慕课网/mo4.jpg) no-repeat center top;
+		}
+		.nav{
+			width: 160px;
+			height:163;
+			position: fixed;
+			left: 0;
+			top: 50%;
+			margin-top: -82px;
+			font-family: "微软雅黑"
+			/*background-color: red;*/
+		}
+		.nav-li{
+			width: 160px;
+			height:auto;
+			border-bottom: 1px solid #ccc;
+			background-color:#333;
+			text-align: center;
+			line-height: 40px;
+			color: #fff;
+			font-size: 12px;
+			font-weight: bolder;
+			cursor: pointer;/*改变鼠标形状*/
+		}
+		.nav-li:hover ul{
+			display: block;/*鼠标移动到该元素时，显示二级标题*/
+		}
+		.nav-li ul{
+			width: 160px;
+			height:auto;
+			display: none;/*隐藏二级标题*/
+
+		}
+		.nav-li ul li{
+			width: 160px;
+			height:40px;
+			border-bottom: 1px solid #666;
+			background-color: #999;
+			text-align: center;
+			line-height: 40px;
+			color: #fff;
+			position: relative;
+		}
+	
+		.special{border-bottom: none;}
+		.tit{
+			width: 160px;
+			height:40px;			
+		}
+		.nav-li ul li:hover .list-3{
+			display: block;
+		}		
+		.list-3{
+			width: 160px;
+			height:auto;
+			position: absolute;
+			left: 150px;
+			top: 0;
+			display: none;
+
+		}	
+		.list-3dom{
+			width: 160px;
+			height:40px;
+			background: #444;
+			border-bottom: 1px solid #666;
+			background-color: #999;
+			text-align: center;
+			line-height: 40px;
+			color: #fff;			
+		}			
+	</style>
+</head>
+<body>
+	<div class="page">
+		<div class="nav">
+			<div class="nav-li">
+				<div class="tit">计算机</div>
+				<ul>
+					<li>计算机基础
+						<div class="list-3">
+							<div class="list-3dom">office高级应用</div>
+							<div class="list-3dom">程序入门</div>
+						</div>
+
+					</li>
+					<li>编程语言
+						<div class="list-3">
+							<div class="list-3dom">office高级应用</div>
+							<div class="list-3dom">程序入门</div>
+						</div>
+					</li>
+					<li>数据库结构
+							<div class="list-3">
+							<div class="list-3dom">office高级应用</div>
+							<div class="list-3dom">程序入门</div>
+						</div>
+					</li>
+					<li class="special">软件工程
+							<div class="list-3">
+							<div class="list-3dom">office高级应用</div>
+							<div class="list-3dom">程序入门</div>
+						</div>
+					</li>
+
+				</ul>
+
+			</div>
+			<div class="nav-li">经济
+				<ul>
+					<li>经济学
+						<div class="list-3">
+							<div class="list-3dom">office高级应用</div>
+							<div class="list-3dom">程序入门</div>
+						</div>
+					</li>
+					<li>金融学
+						<div class="list-3">
+							<div class="list-3dom">office高级应用</div>
+							<div class="list-3dom">程序入门</div>
+						</div>
+					</li>
+					<li>工商管理
+						<div class="list-3">
+							<div class="list-3dom">office高级应用</div>
+							<div class="list-3dom">程序入门</div>
+						</div>
+					</li>
+					<li class="special">公共管理
+						<div class="list-3">
+							<div class="list-3dom">office高级应用</div>
+							<div class="list-3dom">程序入门</div>
+						</div>
+					</li>
+					
+				</ul>				
+			</div>
+			<div class="nav-li">管理
+				<ul>
+					<li>政治</li>
+					<li>英语</li>
+					<li>心理学</li>
+					<li class="special">法律</li>
+					
+				</ul>				
+
+			</div>
+			<div class="nav-li special">艺术
+				<ul>
+					<li>艺术</li>
+					<li>建筑</li>
+					<li>设计</li>
+					<li class="special">音乐</li>
+					
+				</ul>
+			</div>
+			
+		</div>
+		
+	</div>
+</body>
+</html>

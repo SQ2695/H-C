@@ -1,0 +1,229 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+@font-face{
+	font-family: "iconfont";
+	src:url("../img/font/iconfont.eot");
+	src:url("../img/font/iconfont.eot") format("embedded-opentype"),
+		url("../img/font/iconfont.woff") format("woff"),
+		url("../img/font/iconfont.ttf") format("truetype"),
+		url("../img/font/iconfont.svg#iconfog") format("svg");
+
+
+}
+
+ul{
+	list-style: none;
+}
+
+body{
+	font-family: "微软雅黑";
+	color:#14191e;
+}
+
+.main{
+	width: 1200px;
+	height: 460px;
+	margin:30px auto;
+	position: relative;
+	overflow: hidden;/*只显示一张图片*/
+
+}
+/*图片轮播*/
+.banner{
+	width: 1200px;
+	height: 460px;
+	position: relative;
+
+}
+
+.banner-slide{
+	width: 1200px;
+	height: 460px;
+	position: absolute;
+	/*相对于父盒子banner的绝对定位，故父盒子需要加相对定位*/
+	background-repeat: no-repeat;
+	display: none;
+
+}
+
+.slide-active{
+	display: block;
+}
+.slide1{
+	background-image: url("../img/bg1.jpg");
+	/*必须用background-image，如使用background会导致banner-slide的background-repeat重新设置*/
+}
+.slide2{
+	background-image: url("../img/bg2.jpg");
+
+}
+.slide3{
+	background-image: url("../img/bg3.jpg");
+
+}
+
+
+/*上一张下一张按钮*/
+.button{
+	position: absolute;
+	width: 40px;
+	height: 80px;
+	left: 244px;
+	top: 50%;
+	margin-top:-40px;
+	background: url(../img/arrow.png) no-repeat center center;
+}
+
+.button:hover{
+	background-color: #333;/*只改变背景颜色，不改变其余背景属性*/
+	opacity: 0.8;
+	filter: alpha(opacity-80);
+}
+
+.prev{
+	transform: rotate(180deg);/*旋转180*/
+}
+.next{
+	left: auto;
+	/*只添加right是不可行的，因为button中已经设置了left，优先级更高。所以这里应该重新设置left*/
+	right: 0;
+}
+
+/*添加小圆点*/
+.dots{
+	position: absolute;
+	right: 50%;
+	bottom: 24px;
+	text-align: right;
+
+}
+
+.dots span{
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	line-height: 12px;
+	border-radius: 50%;
+	background-color: rgba(7,17,27,0.4);/*添加半透明的颜色*/
+	box-shadow: 0 0 0 2px rgba(255,255,255,0.8) inset/*内阴影*/;
+	margin-left: 8px;
+	cursor: pointer;
+
+}
+.dots span.active{
+	box-shadow: 0 0 0 2px rgba(7,17,27,0.4) inset;
+	background-color:#fff;
+}
+
+
+/*菜单*/
+.menu-box{
+	width: 244px;
+	height: 460px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: rgba(7,17,27,0.5);
+	opacity: 0.5;
+	z-index: 1;/*因为banner具有定位*/
+
+}
+
+.menu-content{
+	width: 244px;
+	height: 460px;
+	position: absolute;	
+	left: 0;
+	top: 0;
+	z-index: 2;
+	padding-top: 6px;
+}
+
+.menu-item{
+	height: 64px;
+	line-height: 64px;
+	font-size: 16px;
+	padding:0 24px;
+	position: relative;
+
+}
+
+.menu-item a:link,.menu-item a:visited{
+	color: #fff;
+
+}
+
+.menu-item a{
+	display: block;
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	padding:0 8px;
+	height: 63px;
+}
+
+.menu-item i{
+	position: absolute;
+	right: 32px;
+	font-size: 24px;
+	top: 0;
+	font-family: "iconfont";
+	font-style: normal;
+	font-weight: normal;
+	color: rgba(255,255,255,0.5)
+
+}
+
+/*子菜单*/
+.sub-menu{
+	width: 730px;
+	height: 458px;
+	border: 1px solid #d9dde1;
+	background: #fff;
+	position: absolute;
+	left: 244px;
+	top: 0;
+	z-index: 999;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+}
+
+.inner-box{
+	width: 730px;
+	height: 458px;
+	border: 1px solid #d9dde1;	
+	background: url("../img/fe.png") no-repeat;
+	display: none;
+}
+
+.sub-inner-box{
+	width: 652px;
+	margin-left: 40px;
+	overflow: hidden;
+}
+
+.title{
+	color: #f01414;
+	font-size: 16px;
+	line-height: 16px;
+	margin: 28px 0 30px 0;
+	font-weight: bold;
+
+}
+.sub-row{
+	margin-top: 25px;
+}
+
+.bold{
+	font-weight: bold;
+}
+
+.mr10{
+	margin-right: 10px;
+}
+.ml10{
+	margin-left: 10px;
+}
+.hide{
+	display: none;
+}

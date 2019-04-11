@@ -1,0 +1,57 @@
+/*弹出层遮罩*/
+.layer-mask{
+	display: none;
+	z-index: 9999;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;
+	background-color: #000;
+
+
+}
+ /*弹出层窗体*/
+.layer-pop{
+	display: none;
+	z-index: 10000;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin:auto;
+
+	width: 400px;
+	height: 300px;
+	background-color: #fff;
+
+
+} 
+
+/*弹出层关闭*/
+.layer-close{
+	float: right;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border: 3px solid #ddd;
+	border-radius: 50%;
+	background-color: #94191e;
+	margin-top: -15px;
+	margin-right: -15px;
+
+}
+.layer-close:hover{
+	cursor: pointer;
+	color: #fff;
+	background-color: #ccc;
+
+}
+
+/*弹出层内容*/
+.layer-content{
+	
+}
